@@ -36,9 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\[Game]\Scripts\CoordinatLabeler.cs" />
-     <Compile Include="Assets\[Game]\Scripts\WayPoint.cs" />
      <Compile Include="Assets\[Game]\Scripts\EnemyMover.cs" />
+     <Compile Include="Assets\[Game]\Scripts\WayPoint.cs" />
+     <Compile Include="Assets\[Game]\Scripts\CoordinatLabeler.cs" />
+     <Compile Include="Assets\[Game]\Scripts\TargetLocator.cs" />
+     <Compile Include="Assets\[Game]\Scripts\EnemyHealt.cs" />
+     <Compile Include="Assets\[Game]\Scripts\ObjectPool.cs" />
+     <Compile Include="Assets\[Game]\Scripts\Enemy.cs" />
      <None Include="Assets\[Game]\AssetPack\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\[Game]\AssetPack\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\[Game]\AssetPack\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
