@@ -41,10 +41,11 @@
      <Compile Include="Assets\[Game]\Scripts\EnemyHealt.cs" />
      <Compile Include="Assets\[Game]\Scripts\TargetLocator.cs" />
      <Compile Include="Assets\[Game]\Scripts\CoordinatLabeler.cs" />
+     <Compile Include="Assets\[Game]\Scripts\Tower.cs" />
+     <Compile Include="Assets\[Game]\Scripts\Bank.cs" />
      <Compile Include="Assets\[Game]\Scripts\Enemy.cs" />
      <Compile Include="Assets\[Game]\Scripts\ObjectPool.cs" />
-     <Compile Include="Assets\[Game]\Scripts\Bank.cs" />
-     <Compile Include="Assets\[Game]\Scripts\Tower.cs" />
+     <Compile Include="Assets\[Game]\Scripts\HideInformationText.cs" />
      <None Include="Assets\[Game]\AssetPack\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\[Game]\AssetPack\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\[Game]\AssetPack\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
