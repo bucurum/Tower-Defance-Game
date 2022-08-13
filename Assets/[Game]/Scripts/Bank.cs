@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class Bank : MonoBehaviour
 {
     [SerializeField] int startingBalance = 150;
-    [SerializeField] int currentBalance;
-    [SerializeField] TextMeshPro displayBalance;    
+    int currentBalance;
+    [SerializeField] TextMeshProUGUI displayBalance;    
 
     public int CurrentBalance { get { return currentBalance; }}
     
