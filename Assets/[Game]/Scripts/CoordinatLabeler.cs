@@ -30,8 +30,8 @@ public class CoordinatLabeler : MonoBehaviour
         }
         SetLabelColor();
         ToggleLabels();
-        //TODO Delete this line
-        label.enabled = true;
+        //TODO Delete line below
+        //label.enabled = true;
     }
 
     private void SetLabelColor()

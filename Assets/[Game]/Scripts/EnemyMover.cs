@@ -8,6 +8,7 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] List<WayPoint> path = new List<WayPoint>();
     [SerializeField] [Range(0,5f)] float speed = 1f;
     Enemy enemy;
+    
 
     void OnEnable()
     {
@@ -23,7 +24,7 @@ public class EnemyMover : MonoBehaviour
     void FindPath()
     {
         path.Clear();
-
+        
         GameObject parent = GameObject.FindGameObjectWithTag("Path");
 
         foreach (Transform child in parent.transform)
@@ -44,13 +45,13 @@ public class EnemyMover : MonoBehaviour
 
     IEnumerator PrintWaypointName()
     {
+       
         foreach (WayPoint waypoint in path)
         {
-            Vector3 startPosition = transform.position;
-            Vector3 endPosition = waypoint.transform.position;
-            float travelPercent = 0f;
-
-            transform.LookAt(endPosition);
+             Vector3 startPosition = transform.position;
+             Vector3 endPosition = waypoint.transform.position;
+             float travelPercent = 0f;
+             transform.LookAt(endPosition);
 
             while (travelPercent < 1f)
             {
@@ -59,6 +60,7 @@ public class EnemyMover : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
+        
         FinishPath();
     }
     void ReturnToStart()

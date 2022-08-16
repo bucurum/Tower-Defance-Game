@@ -8,6 +8,8 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] [Range(0.1f, 30f)] float spawnTimer = 1f;
     [SerializeField] [Range(0, 50)] int poolSize = 5;
 
+    
+    
     GameObject[] pool;
 
     private void Awake()
@@ -18,7 +20,7 @@ public class ObjectPool : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         StartCoroutine(SpawnEnemy());
     }
 
@@ -32,30 +34,28 @@ public class ObjectPool : MonoBehaviour
             pool[i].SetActive(false);
         }
     }
+    //todo wait for all enemies deactive, when every enemies deactive, active it all
 
+    
     void EnableObjectInPool()
     {
-        for (int i = 0; i < pool.Length; i++)
-        {
-            if(pool[i].activeInHierarchy == false)
+            for (int i = 0; i < pool.Length; i++)
             {
-                pool[i].SetActive(true);
-                return;
-            }
-        }
+                if(pool[i].activeInHierarchy == false)
+                {
+                    pool[i].SetActive(true); 
+                    return;
+                }
+            }                 
     }
 
     IEnumerator SpawnEnemy()
     {
+
         while(true)
-        {
+        {  
             EnableObjectInPool();
             yield return new WaitForSeconds(spawnTimer);
         }
-    }
-    
-    void Update()
-    {
-        
     }
 }

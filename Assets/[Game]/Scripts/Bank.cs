@@ -21,6 +21,10 @@ public class Bank : MonoBehaviour
     {
         currentBalance += Mathf.Abs(amount);
         UpdateDisplay();
+        if (currentBalance > 400)
+        {
+            LoadNextScene();
+        }
     }
 
     void UpdateDisplay()
@@ -35,13 +39,20 @@ public class Bank : MonoBehaviour
         if (currentBalance < 0)
         {
             ReloadScene();
-        }
+        }  
     }
+
     void ReloadScene()
     {
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.buildIndex);
         
+    }
+
+    void LoadNextScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.buildIndex + 1);   
     }
     
 }
