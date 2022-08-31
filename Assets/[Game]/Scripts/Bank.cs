@@ -11,7 +11,7 @@ public class Bank : MonoBehaviour
     [SerializeField] TextMeshProUGUI displayBalance;    
 
     public int CurrentBalance { get { return currentBalance; }}
-    
+
     void Awake()
     {
         currentBalance = startingBalance;
