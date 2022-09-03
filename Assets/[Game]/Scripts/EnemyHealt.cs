@@ -11,6 +11,7 @@ public class EnemyHealt : MonoBehaviour
     [SerializeField] int difficultyRamp = 6;
     int currentHitPoint = 0;
     Enemy enemy;
+    ObjectPool objectPool;
 
     void OnEnable()
     {
@@ -34,6 +35,7 @@ public class EnemyHealt : MonoBehaviour
         if (currentHitPoint <= 0)
         {
             gameObject.SetActive(false);
+            objectPool.waitForEveryEnemiesDie();
             maxHitPoint += difficultyRamp;
             enemy.RewardGold();
         }

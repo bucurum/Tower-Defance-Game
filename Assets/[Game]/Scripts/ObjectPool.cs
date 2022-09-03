@@ -6,27 +6,28 @@ public class ObjectPool : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] [Range(0.1f, 30f)] float spawnTimer = 1f;
-    [SerializeField] [Range(0, 50)] int poolSize = 5;
+    [SerializeField] [Range(0, 50)] int poolSize = 10;
 
     
     
     GameObject[] pool;
-
+    public int enemyCount;
+    bool isAllDead;
+    
     private void Awake()
     {
         PopulatePool();
     }
 
-
-    // Start is called before the first frame update
     void Start()
     {   
         StartCoroutine(SpawnEnemy());
     }
 
-    private void PopulatePool()
+    void PopulatePool()
     {
         pool = new GameObject[poolSize];
+        enemyCount = pool.Length;
 
         for (int i = 0; i < pool.Length; i++)
         {
@@ -35,7 +36,6 @@ public class ObjectPool : MonoBehaviour
         }
     }
     //todo wait for all enemies deactive, when every enemies deactive, active it all
-
     
     void EnableObjectInPool()
     {
@@ -48,14 +48,29 @@ public class ObjectPool : MonoBehaviour
                 }
             }                 
     }
-
+    public void waitForEveryEnemiesDie()
+    {
+        enemyCount--;
+        if(enemyCount <= 0)
+        {
+            isAllDead = true;
+        }else
+        {
+            isAllDead = false;
+        }
+    }
+    
     IEnumerator SpawnEnemy()
     {
-
-        while(true)
+        if(isAllDead)
         {  
-            EnableObjectInPool();
-            yield return new WaitForSeconds(spawnTimer);
+            for (int i = 0; i < poolSize; i++)
+            {
+                EnableObjectInPool();
+                yield return new WaitForSeconds(spawnTimer);
+            }
+            
         }
+        
     }
 }

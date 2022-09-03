@@ -8,7 +8,7 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] List<WayPoint> path = new List<WayPoint>();
     [SerializeField] [Range(0,5f)] float speed = 1f;
     Enemy enemy;
-    
+    ObjectPool objectPool;
 
     void OnEnable()
     {
@@ -40,6 +40,7 @@ public class EnemyMover : MonoBehaviour
     void FinishPath()
     {
         gameObject.SetActive(false);
+        objectPool.waitForEveryEnemiesDie();
         enemy.StealGold();
     }
 
