@@ -21,6 +21,7 @@ public class EnemyHealt : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<Enemy>();
+        objectPool = GetComponent<ObjectPool>();
     }
 
     void OnParticleCollision(GameObject other)
@@ -35,9 +36,9 @@ public class EnemyHealt : MonoBehaviour
         if (currentHitPoint <= 0)
         {
             gameObject.SetActive(false);
-            objectPool.waitForEveryEnemiesDie();
             maxHitPoint += difficultyRamp;
             enemy.RewardGold();
+            objectPool.waitForEveryEnemiesDie();
         }
     }
 }

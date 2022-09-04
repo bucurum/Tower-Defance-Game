@@ -19,15 +19,19 @@ public class ObjectPool : MonoBehaviour
         PopulatePool();
     }
 
+
+    // Start is called before the first frame update
     void Start()
     {   
-        StartCoroutine(SpawnEnemy());
+        enemyCount = poolSize;
+        StartCoroutine(EnableObjectInPool());
+        SpawnEnemy();
     }
 
     void PopulatePool()
     {
         pool = new GameObject[poolSize];
-        enemyCount = pool.Length;
+        
 
         for (int i = 0; i < pool.Length; i++)
         {
@@ -37,40 +41,38 @@ public class ObjectPool : MonoBehaviour
     }
     //todo wait for all enemies deactive, when every enemies deactive, active it all
     
-    void EnableObjectInPool()
-    {
-            for (int i = 0; i < pool.Length; i++)
+    IEnumerator EnableObjectInPool()
+    {      
+            foreach (var element in pool)
             {
-                if(pool[i].activeInHierarchy == false)
+                if(element.activeInHierarchy == false)
                 {
-                    pool[i].SetActive(true); 
-                    return;
-                }
-            }                 
+                    element.SetActive(true);
+                    yield return new WaitForSeconds(spawnTimer);
+                } 
+            }           
     }
     public void waitForEveryEnemiesDie()
     {
-        enemyCount--;
+        Debug.Log("hello you are in waitforeveryenemiesdie funciton");
+        enemyCount -= enemyCount;
         if(enemyCount <= 0)
         {
+            Debug.Log("all enemies die");
             isAllDead = true;
         }else
         {
-            isAllDead = false;
-        }
+            Debug.Log("enemies still alive");
+            isAllDead = false;        
+        }    
+            
     }
     
-    IEnumerator SpawnEnemy()
+    void SpawnEnemy()
     {
-        if(isAllDead)
-        {  
-            for (int i = 0; i < poolSize; i++)
-            {
-                EnableObjectInPool();
-                yield return new WaitForSeconds(spawnTimer);
-            }
-            
-        }
-        
+        for(int i = 0 ; i < poolSize ; i++)
+        {
+            EnableObjectInPool();  
+        }     
     }
 }
