@@ -41,7 +41,7 @@ public class EnemyMover : MonoBehaviour
     {
         gameObject.SetActive(false);
         enemy.StealGold();
-        objectPool.waitForEveryEnemiesDie();
+        objectPool.enemyCount--;
     }
 
     IEnumerator PrintWaypointName()

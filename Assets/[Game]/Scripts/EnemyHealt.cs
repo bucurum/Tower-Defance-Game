@@ -21,7 +21,6 @@ public class EnemyHealt : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<Enemy>();
-        objectPool = GetComponent<ObjectPool>();
     }
 
     void OnParticleCollision(GameObject other)
@@ -29,16 +28,17 @@ public class EnemyHealt : MonoBehaviour
         ProcessHit();
     }
 
-    private void ProcessHit()
+    void ProcessHit()
     {
         currentHitPoint--;
 
         if (currentHitPoint <= 0)
-        {
+        { 
             gameObject.SetActive(false);
             maxHitPoint += difficultyRamp;
             enemy.RewardGold();
-            objectPool.waitForEveryEnemiesDie();
+            objectPool.enemyCount--;
+            
         }
     }
 }
