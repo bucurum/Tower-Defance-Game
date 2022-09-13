@@ -11,7 +11,7 @@ public class EnemyHealt : MonoBehaviour
     [SerializeField] int difficultyRamp = 6;
     int currentHitPoint = 0;
     Enemy enemy;
-    ObjectPool objectPool;
+    
 
     void OnEnable()
     {
@@ -37,7 +37,7 @@ public class EnemyHealt : MonoBehaviour
             gameObject.SetActive(false);
             maxHitPoint += difficultyRamp;
             enemy.RewardGold();
-            objectPool.enemyCount--;
+            ObjectPool.enemyCount--;
             
         }
     }

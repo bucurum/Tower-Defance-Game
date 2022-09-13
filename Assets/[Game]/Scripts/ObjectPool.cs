@@ -8,7 +8,7 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] [Range(0.1f, 30f)] float spawnTimer = 1f;
     [SerializeField] [Range(0, 50)] public int poolSize = 10;
 
-    public int enemyCount = 10;
+    public static int enemyCount = 10;
     
     GameObject[] pool;
    
@@ -32,7 +32,9 @@ public class ObjectPool : MonoBehaviour
         if(enemyCount <= 0)
         {
             Debug.Log("all enemies die");
-            //StartCoroutine(objectPool.EnableObjectInPool());
+            StartCoroutine(EnableObjectInPool());
+            SpawnEnemy();
+            enemyCount = poolSize;
         }else
         {
             Debug.Log("still alive enemy left");   
