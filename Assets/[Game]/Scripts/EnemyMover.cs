@@ -46,7 +46,6 @@ public class EnemyMover : MonoBehaviour
 
     IEnumerator PrintWaypointName()
     {
-       
         foreach (WayPoint waypoint in path)
         {
              Vector3 startPosition = transform.position;
@@ -61,7 +60,6 @@ public class EnemyMover : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
-        
         FinishPath();
     }
     void ReturnToStart()

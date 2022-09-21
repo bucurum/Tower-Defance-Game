@@ -21,7 +21,7 @@ public class Bank : MonoBehaviour
     {
         currentBalance += Mathf.Abs(amount);
         UpdateDisplay();
-        if (currentBalance > 400)
+        if (currentBalance > 600)
         {
             LoadNextScene();
         }
