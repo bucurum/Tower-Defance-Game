@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\[Game]\Scripts\ClickUnplaceableTile.cs" />
      <Compile Include="Assets\[Game]\Scripts\EnemyMover.cs" />
      <Compile Include="Assets\[Game]\Scripts\MenuButton.cs" />
      <Compile Include="Assets\[Game]\Scripts\WayPoint.cs" />
@@ -49,7 +50,7 @@
      <Compile Include="Assets\[Game]\Scripts\Bank.cs" />
      <Compile Include="Assets\[Game]\Scripts\Enemy.cs" />
      <Compile Include="Assets\[Game]\Scripts\ObjectPool.cs" />
-     <Compile Include="Assets\[Game]\Scripts\ClickUnplaceableTile.cs" />
+     <Compile Include="Assets\[Game]\Scripts\ShowHideXIcon.cs" />
      <None Include="Assets\[Game]\AssetPack\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\[Game]\AssetPack\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\[Game]\AssetPack\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

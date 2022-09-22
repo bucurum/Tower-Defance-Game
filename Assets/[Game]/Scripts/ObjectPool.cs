@@ -52,7 +52,6 @@ public class ObjectPool : MonoBehaviour
             pool[i].SetActive(false);
         }
     }
-    //todo wait for all enemies deactive, when every enemies deactive, active it all
     
     public IEnumerator EnableObjectInPool()
     {      
