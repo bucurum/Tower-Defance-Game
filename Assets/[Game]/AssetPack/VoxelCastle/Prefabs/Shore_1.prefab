@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2551459973006143472}
   - component: {fileID: 1604887667235578309}
+  - component: {fileID: 1730228279680602133}
   m_Layer: 0
   m_Name: Shore_1
   m_TagString: Untagged
@@ -46,6 +47,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: -79700024982187862, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
   isPlaceable: 0
+  myPrefab: {fileID: 7879602859972590169, guid: ba5490f88d7ef0240bae6c99b038c13b, type: 3}
+--- !u!65 &1730228279680602133
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2892238945886205258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.5, z: 10}
+  m_Center: {x: 0, y: -0.25, z: 0}
 --- !u!1 &6174013010189454739
 GameObject:
   m_ObjectHideFlags: 0

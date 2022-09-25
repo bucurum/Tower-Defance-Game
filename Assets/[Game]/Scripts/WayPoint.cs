@@ -7,16 +7,17 @@ public class WayPoint : MonoBehaviour
 {
     [SerializeField] Tower towerPrefab;
     [SerializeField] bool isPlaceable;
+    public GameObject myPrefab;
 
     float cooldown = 1.5f;
 
-    ShowHideXIcon showHideXIcon;
+   // ShowHideXIcon showHideXIcon;
 
     public bool IsPlaceable { get { return isPlaceable; } }
 
     void Start()
     {
-        showHideXIcon = GetComponent<ShowHideXIcon>();
+       // showHideXIcon = GetComponent<ShowHideXIcon>();
     }
 
     void OnMouseDown()
@@ -28,19 +29,20 @@ public class WayPoint : MonoBehaviour
         }
         else
         {
-            Debug.Log("ShowXicon");
+            Destroy(Instantiate(myPrefab, transform.position, Quaternion.identity), cooldown);
+            /*Debug.Log("ShowXicon");
             showHideXIcon.ShowXIcon();
             Debug.Log("Starting corutine");
-            StartCoroutine(WaitForCoolDown());
+            StartCoroutine(WaitForCoolDown());*/
         }
             
     }
 
-    IEnumerator WaitForCoolDown()
+  /*  IEnumerator WaitForCoolDown()
     {
         yield return new WaitForSeconds(cooldown);
         cooldown = 1.5f;
         showHideXIcon.HideXIcon();
 
-    }
+    }*/
 }
