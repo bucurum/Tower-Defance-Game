@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3701787248945311207, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
+      propertyPath: Xicon
+      value: 
+      objectReference: {fileID: 7879602859972590169, guid: ba5490f88d7ef0240bae6c99b038c13b, type: 3}
+    - target: {fileID: 3701787248945311207, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
       propertyPath: isPlaceable
       value: 0
       objectReference: {fileID: 0}
@@ -17,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4010281373863547004, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4010281373863547004, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4010281373863547004, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4010281373863547004, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33,15 +37,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4010281373863547004, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4010281373863547004, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4010281373863547004, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4010281373863547004, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -57,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6980201349868790338, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
       propertyPath: m_Name
-      value: Tile_90DegreeRoadCorner
+      value: (1, 1)
       objectReference: {fileID: 0}
     - target: {fileID: 8144313133763489760, guid: a8721fb6eb3defe458e3225ae01abb49, type: 3}
       propertyPath: m_LocalRotation.w

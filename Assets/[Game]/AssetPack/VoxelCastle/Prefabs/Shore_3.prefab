@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: -79700024982187862, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
   isPlaceable: 0
-  myPrefab: {fileID: 7879602859972590169, guid: ba5490f88d7ef0240bae6c99b038c13b, type: 3}
+  Xicon: {fileID: 7879602859972590169, guid: ba5490f88d7ef0240bae6c99b038c13b, type: 3}
 --- !u!65 &8977376668846123355
 BoxCollider:
   m_ObjectHideFlags: 0

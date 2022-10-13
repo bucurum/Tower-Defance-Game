@@ -7,7 +7,7 @@ public class WayPoint : MonoBehaviour
 {
     [SerializeField] Tower towerPrefab;
     [SerializeField] bool isPlaceable;
-    public GameObject myPrefab;
+    public GameObject Xicon;
 
     float cooldown = 1.5f;
 
@@ -29,7 +29,7 @@ public class WayPoint : MonoBehaviour
         }
         else
         {
-            Destroy(Instantiate(myPrefab, transform.position, Quaternion.identity), cooldown);
+            Destroy(Instantiate(Xicon, transform.position , Quaternion.identity), cooldown);
             /*Debug.Log("ShowXicon");
             showHideXIcon.ShowXIcon();
             Debug.Log("Starting corutine");
