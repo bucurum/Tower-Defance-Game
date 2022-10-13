@@ -29,20 +29,8 @@ public class WayPoint : MonoBehaviour
         }
         else
         {
-            Destroy(Instantiate(Xicon, transform.position , Quaternion.identity), cooldown);
-            /*Debug.Log("ShowXicon");
-            showHideXIcon.ShowXIcon();
-            Debug.Log("Starting corutine");
-            StartCoroutine(WaitForCoolDown());*/
-        }
-            
+            Destroy(Instantiate(Xicon, transform.position , Quaternion.identity), cooldown);   
+        }       
     }
 
-  /*  IEnumerator WaitForCoolDown()
-    {
-        yield return new WaitForSeconds(cooldown);
-        cooldown = 1.5f;
-        showHideXIcon.HideXIcon();
-
-    }*/
 }

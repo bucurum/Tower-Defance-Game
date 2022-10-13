@@ -5,10 +5,10 @@ using TMPro;
 
 public class HideInformationText : MonoBehaviour
 {
-    TextMeshProUGUI informationText;
+    public GameObject informationText;
     void Awake()
     {
-        informationText = GetComponent<TextMeshProUGUI>();
+        informationText.SetActive(true);
     }
 
     
@@ -21,7 +21,7 @@ public class HideInformationText : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            informationText.enabled = false;
+            informationText.SetActive(false);
         }
         
     }

@@ -15,4 +15,5 @@ public class AwaitingForLeftClick : MonoBehaviour
             Time.timeScale = 1;
         } 
     }
+
 }
