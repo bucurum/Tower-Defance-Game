@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Bank : MonoBehaviour
 {
     [SerializeField] int startingBalance = 150;
+    [SerializeField] int finisingBalance;
     int currentBalance;
     [SerializeField] TextMeshProUGUI displayBalance;    
 
@@ -21,7 +22,7 @@ public class Bank : MonoBehaviour
     {
         currentBalance += Mathf.Abs(amount);
         UpdateDisplay();
-        if (currentBalance > 600)
+        if (currentBalance >= finisingBalance)
         {
             LoadNextScene();
         }

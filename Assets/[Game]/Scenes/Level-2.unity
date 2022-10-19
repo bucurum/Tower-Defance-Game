@@ -1128,9 +1128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tower Cost 75 Gold
-
-    Left Click To Place'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4475,7 +4473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470755011}
   m_Layer: 0
-  m_Name: World Tile
+  m_Name: Grass Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5179,7 +5177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 504721064}
   m_Layer: 0
-  m_Name: Trees and prefabs
+  m_Name: Trees, Water, Island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24152,6 +24150,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2092799576336563965, guid: 60edb74d8c35f3c479b361a046f6a5ed, type: 3}
+      propertyPath: poolSize
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60edb74d8c35f3c479b361a046f6a5ed, type: 3}
 --- !u!1001 &4440346469119961089
@@ -24175,7 +24177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4440346468491842763, guid: 1d277621915a498458675de3933f0c02, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4440346468491842763, guid: 1d277621915a498458675de3933f0c02, type: 3}
       propertyPath: m_AnchorMax.x
@@ -24278,6 +24280,10 @@ PrefabInstance:
       propertyPath: displayBalance
       value: 
       objectReference: {fileID: 1033108683}
+    - target: {fileID: 4866029077404034537, guid: 9d1ee77a916e8f64fa88647dc9699b11, type: 3}
+      propertyPath: finisingBalance
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 4866029077404034537, guid: 9d1ee77a916e8f64fa88647dc9699b11, type: 3}
       propertyPath: startingBalance
       value: 250
