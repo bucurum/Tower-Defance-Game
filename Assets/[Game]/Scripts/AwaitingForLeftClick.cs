@@ -10,7 +10,7 @@ public class AwaitingForLeftClick : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && !MenuButton.isGamePaused)
         {
             Time.timeScale = 1;
         } 

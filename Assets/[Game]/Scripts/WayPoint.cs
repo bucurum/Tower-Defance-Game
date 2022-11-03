@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 public class WayPoint : MonoBehaviour
@@ -10,8 +11,6 @@ public class WayPoint : MonoBehaviour
     public GameObject Xicon;
 
     float cooldown = 1.5f;
-
-   // ShowHideXIcon showHideXIcon;
 
     public bool IsPlaceable { get { return isPlaceable; } }
 
@@ -29,6 +28,7 @@ public class WayPoint : MonoBehaviour
         }
         else
         {
+            if (!EventSystem.current.IsPointerOverGameObject())
             Destroy(Instantiate(Xicon, transform.position , Quaternion.identity), cooldown);   
         }       
     }
