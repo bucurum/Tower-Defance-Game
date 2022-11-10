@@ -17469,7 +17469,7 @@ PrefabInstance:
       objectReference: {fileID: 763797627}
     - target: {fileID: 4866029077404034537, guid: 9d1ee77a916e8f64fa88647dc9699b11, type: 3}
       propertyPath: finisingBalance
-      value: 600
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4866029077404034537, guid: 9d1ee77a916e8f64fa88647dc9699b11, type: 3}
       propertyPath: startingBalance
@@ -17672,7 +17672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5601283136089750161, guid: 1a21bfa5cf6850943a8cb2f82b44cc0f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5601283136089750163, guid: 1a21bfa5cf6850943a8cb2f82b44cc0f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -17688,7 +17688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5601283136143284616, guid: 1a21bfa5cf6850943a8cb2f82b44cc0f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5601283136143284619, guid: 1a21bfa5cf6850943a8cb2f82b44cc0f, type: 3}
       propertyPath: m_Pivot.x
@@ -17851,7 +17851,7 @@ MonoBehaviour:
     If the enemy Reach the Tower Steals 25 Gold
 
     Goal Is To Reach
-    600 Gold'
+    500 Gold'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
