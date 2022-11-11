@@ -8,6 +8,7 @@ public class WayPoint : MonoBehaviour
 {
     [SerializeField] Tower towerPrefab;
     [SerializeField] bool isPlaceable;
+    WheelButtonHandler wheelButtonHandler;
     public GameObject Xicon;
 
     float cooldown = 1.5f;
