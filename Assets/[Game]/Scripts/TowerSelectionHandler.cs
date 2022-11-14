@@ -4,32 +4,33 @@ using UnityEngine;
 
 public class TowerSelectionHandler : MonoBehaviour
 {
+    [SerializeField] Tower tower1;
     public Animator animator;
-    private bool towerWheelSelected = false;
+    public static bool towerWheelSelected = false;
     public static int towerID;
     WheelButtonHandler wheelButtonHandler;
+    WayPoint wayPoint;
+    GameObject findWaypoint;
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        if(Input.GetKeyDown(KeyCode.Tab))
+        findWaypoint = GameObject.FindWithTag("Enviorment");
+        wayPoint = findWaypoint.GetComponentInChildren<WayPoint>();
+    }
+
+    public void OpenTowerSelectionWheel()
+    {
+        if(Input.GetKey(KeyCode.Tab) || Input.GetMouseButton(0))
         {
             towerWheelSelected = !towerWheelSelected;
         }
 
-        if (towerWheelSelected)
-        {
-            animator.SetBool("OpenWheel", true);
-        }else
-        {
-            animator.SetBool("OpenWheel", false);
-        }
         switch (towerID)
         {
             case 0:
                 break;
             case 1:
-                Debug.Log("fist tower selected");
+                wayPoint.InstantiateTower(tower1);
                 break;
             case 2:
                 Debug.Log("second tower selected");
@@ -41,7 +42,13 @@ public class TowerSelectionHandler : MonoBehaviour
                 Debug.Log("forth tower selected");
                 break;
         }
-       
         
+        if (towerWheelSelected)
+        {
+            animator.SetBool("OpenWheel", true);
+        }else
+        {
+            animator.SetBool("OpenWheel", false);
+        }
     }
 }
