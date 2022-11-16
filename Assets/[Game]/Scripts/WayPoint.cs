@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class WayPoint : MonoBehaviour
 {
     [SerializeField] Tower towerPrefab;
+    [SerializeField] Tower towerPrefab1;
     [SerializeField] bool isPlaceable;
     
     public GameObject Xicon;
@@ -28,7 +29,23 @@ wayPoint = findWaypoint.GetComponentInChildren<WayPoint>();
 */
     void OnMouseDown()
     {
-       towerSelectionHandler.OpenTowerSelectionWheel();  
+       switch (TowerSelectionHandler.towerID)
+        {
+            case 0:
+                break;
+            case 1:
+                InstantiateTower(towerPrefab);
+                break;
+            case 2:
+                InstantiateTower(towerPrefab1);
+                break;
+            case 3:
+                Debug.Log(TowerSelectionHandler.towerID);
+                break;
+            case 4:
+                Debug.Log(TowerSelectionHandler.towerID);
+                break;
+        } 
     }
     public void InstantiateTower(Tower towerPrefab)
     {
