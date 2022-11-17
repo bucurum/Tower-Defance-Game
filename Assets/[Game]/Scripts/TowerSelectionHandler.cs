@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerSelectionHandler : MonoBehaviour
 {
     public Animator animator;
-    public static bool towerWheelSelected = true;
+    public static bool towerWheelSelected = false;
     public static int towerID;
 
     void Update()

@@ -8,8 +8,11 @@ public class WheelButtonHandler : MonoBehaviour
     public TextMeshProUGUI itemText;
 
     public bool selected = false;
+    WayPoint wayPoint;
     
-
+    private void Start() {
+        wayPoint = GetComponent<WayPoint>();
+    }
     void Update()
     {
         if (selected)
@@ -21,6 +24,17 @@ public class WheelButtonHandler : MonoBehaviour
     {
         selected = true;
         TowerSelectionHandler.towerID = ID;
+        switch (TowerSelectionHandler.towerID)
+        {
+            case 0:
+                break;
+            case 1:
+                wayPoint.InstantiateTower();
+                break;
+            case 2:
+                wayPoint.InstantiateTower();
+                break;
+        }
     }
     public void Deselected()
     {

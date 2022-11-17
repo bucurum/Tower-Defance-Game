@@ -12,7 +12,7 @@ public class WayPoint : MonoBehaviour
     
     public GameObject Xicon;
     TowerSelectionHandler towerSelectionHandler;
-    GameObject findTowerSelectionHandler;
+    
 
     float cooldown = 1.5f;
 
@@ -20,8 +20,7 @@ public class WayPoint : MonoBehaviour
 
     void Awake()
     {
-        findTowerSelectionHandler = GameObject.Find("TowerSelectionWheel");
-        towerSelectionHandler = findTowerSelectionHandler.GetComponent<TowerSelectionHandler>();
+        towerSelectionHandler = GameObject.Find("TowerSelectionWheel").GetComponent<TowerSelectionHandler>();
     }
 /*
 findWaypoint = GameObject.FindWithTag("Enviorment");
@@ -29,7 +28,7 @@ wayPoint = findWaypoint.GetComponentInChildren<WayPoint>();
 */
     void OnMouseDown()
     {
-       switch (TowerSelectionHandler.towerID)
+       /*switch (TowerSelectionHandler.towerID)
         {
             case 0:
                 break;
@@ -45,9 +44,9 @@ wayPoint = findWaypoint.GetComponentInChildren<WayPoint>();
             case 4:
                 Debug.Log(TowerSelectionHandler.towerID);
                 break;
-        } 
+        } */
     }
-    public void InstantiateTower(Tower towerPrefab)
+    public void InstantiateTower()
     {
         if (isPlaceable)
             {
