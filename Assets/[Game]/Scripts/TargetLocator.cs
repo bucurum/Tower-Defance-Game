@@ -8,11 +8,6 @@ public class TargetLocator : MonoBehaviour
     [SerializeField] float towerRange = 15f;
     [SerializeField] ParticleSystem projectileParticleSystem;
     Transform target;
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {

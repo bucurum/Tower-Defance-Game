@@ -10,8 +10,9 @@ public class WheelButtonHandler : MonoBehaviour
     public bool selected = false;
     WayPoint wayPoint;
     
-    private void Start() {
-        wayPoint = GetComponent<WayPoint>();
+    void Start() 
+    {
+        wayPoint = GameObject.FindGameObjectWithTag("WordTiles").GetComponent<WayPoint>();
     }
     void Update()
     {
@@ -24,15 +25,17 @@ public class WheelButtonHandler : MonoBehaviour
     {
         selected = true;
         TowerSelectionHandler.towerID = ID;
-        switch (TowerSelectionHandler.towerID)
+        switch (ID)
         {
             case 0:
                 break;
             case 1:
-                wayPoint.InstantiateTower();
+                Debug.Log("Hello there" + wayPoint.tempPosition);
+                wayPoint.InstantiateTower(wayPoint.tempPosition);
+                Debug.Log("Bye Bye");
                 break;
             case 2:
-                wayPoint.InstantiateTower();
+               
                 break;
         }
     }

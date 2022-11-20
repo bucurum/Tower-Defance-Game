@@ -8,8 +8,7 @@ public class Tower : MonoBehaviour
     
    public bool CreateTower(Tower tower, Vector3 position)
    {
-        if (!EventSystem.current.IsPointerOverGameObject())
-        {
+       
             Bank bank = FindObjectOfType<Bank>();
             if(bank == null)
             {
@@ -23,7 +22,7 @@ public class Tower : MonoBehaviour
 
                 return true;   
             }  
-        }
+        
     return false;    
    }
 }
