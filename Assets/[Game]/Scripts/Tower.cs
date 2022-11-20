@@ -8,7 +8,8 @@ public class Tower : MonoBehaviour
     
    public bool CreateTower(Tower tower, Vector3 position)
    {
-       
+       if (!EventSystem.current.IsPointerOverGameObject())
+        { 
             Bank bank = FindObjectOfType<Bank>();
             if(bank == null)
             {
@@ -21,7 +22,13 @@ public class Tower : MonoBehaviour
                 bank.Withdraw(costOfTower);
 
                 return true;   
-            }  
+            } 
+            else if (bank.CurrentBalance < costOfTower)
+            {
+                Debug.Log("You Cannot Afford A Tower");
+                return false;
+            } 
+        }
         
     return false;    
    }

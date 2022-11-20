@@ -8,11 +8,15 @@ public class WayPoint : MonoBehaviour
 {
     [SerializeField] Tower towerPrefab;
     [SerializeField] Tower towerPrefab1;
+    [SerializeField] Tower towerPrefab2;
+    [SerializeField] Tower towerPrefab3;
+
+    public static int towerID;
+    
     [SerializeField] bool isPlaceable;
     bool isPlaced;
     
     public GameObject Xicon;
-    TowerSelectionHandler towerSelectionHandler;
     
 
     float cooldown = 1.5f;
@@ -20,59 +24,44 @@ public class WayPoint : MonoBehaviour
     public bool IsPlaceable { get { return isPlaceable; } }
     public Vector3 tempPosition;
 
-    void Awake()
-    {
-        towerSelectionHandler = GameObject.Find("TowerSelectionWheel").GetComponent<TowerSelectionHandler>();
-    }
-/*
-findWaypoint = GameObject.FindWithTag("Enviorment");
-wayPoint = findWaypoint.GetComponentInChildren<WayPoint>();
-*/
     void OnMouseDown()
     {
-        Debug.Log("first hello here");
-       /* */
+        switch(towerID)
+        {
+            case 0:
+                Debug.Log("Please Choose A Tower");
+                break;
+            case 1:
+                InstantiateTower(towerPrefab);
+                Debug.Log("towerprefab is placed");
+                break;
+            case 2:
+                InstantiateTower(towerPrefab1);
+                Debug.Log("towerprefab1 is placed");
+                break;
+            case 3:
+                InstantiateTower(towerPrefab2);
+                Debug.Log("towerprefab2 is placed");
+                break;
+            case 4:
+                InstantiateTower(towerPrefab3);
+                Debug.Log("towerprefab3 is placed");
+                break;
+        }
+        
+    }
+    public void InstantiateTower(Tower tower)
+    {
         if (isPlaceable)
         {
-            if (!EventSystem.current.IsPointerOverGameObject())
-            {
-                tempPosition = transform.position;
-            } 
-            Debug.Log("second hello here" + tempPosition);
-            
-            //InstantiateTower(transform.position);
+            isPlaced = tower.CreateTower(tower, transform.position);   
+            isPlaceable = !isPlaced;
         }else
         {
             if (!EventSystem.current.IsPointerOverGameObject())
             {
                 Destroy(Instantiate(Xicon, transform.position , Quaternion.identity), cooldown);   
-            }         
-        }
-    }
-    public void InstantiateTower(Vector3 position)
-    {
-        /*isPlaced = towerPrefab.CreateTower(towerPrefab, transform.position);   
-        isPlaceable = !isPlaced;
-*/      Debug.Log("third hello here");
-        switch(TowerSelectionHandler.towerID)
-        {   
-            case 0:
-                break;
-            case 1:
-                Debug.Log("forth hello here");
-                isPlaced = towerPrefab.CreateTower(towerPrefab, transform.position);   
-                isPlaceable = !isPlaced;
-                break;
-            case 2:
-                isPlaced = towerPrefab.CreateTower(towerPrefab1, transform.position);   
-                isPlaceable = !isPlaced;
-                break;
-            case 3:
-                Debug.Log(TowerSelectionHandler.towerID);
-                break;
-            case 4:
-                Debug.Log(TowerSelectionHandler.towerID);
-                break;
+            } 
         }
     }
 }
