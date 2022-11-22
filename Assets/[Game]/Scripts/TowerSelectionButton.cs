@@ -36,6 +36,7 @@ public class TowerSelectionButton : MonoBehaviour
     {
         selected = false;
         WayPoint.towerID = 0;
+        itemText.text = "";
     }
     public void HoverEnter()
     {

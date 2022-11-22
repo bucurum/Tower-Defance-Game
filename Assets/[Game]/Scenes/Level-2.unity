@@ -18986,6 +18986,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerSelection
       objectReference: {fileID: 0}
+    - target: {fileID: 5283715246182625360, guid: d77a3c20c2c790247bf44fee4c505985, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.05490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283715246182625360, guid: d77a3c20c2c790247bf44fee4c505985, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.7294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283715246182625362, guid: d77a3c20c2c790247bf44fee4c505985, type: 3}
+      propertyPath: m_Name
+      value: TowerGoldInformationText
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283715246182625363, guid: d77a3c20c2c790247bf44fee4c505985, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 330
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77a3c20c2c790247bf44fee4c505985, type: 3}
 --- !u!4 &1534108613 stripped

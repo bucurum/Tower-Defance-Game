@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Bank : MonoBehaviour
 {
-    [SerializeField] int startingBalance = 150;
+    [SerializeField] int startingBalance = 250;
     [SerializeField] int finisingBalance;
     int currentBalance;
     [SerializeField] TextMeshProUGUI displayBalance;    
@@ -40,7 +40,7 @@ public class Bank : MonoBehaviour
         if (currentBalance < 0)
         {
             ReloadScene();
-        }  
+        } 
     }
 
     void ReloadScene()
@@ -54,6 +54,18 @@ public class Bank : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.buildIndex + 1);   
+    }
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.H))
+        {
+            currentBalance = 500;
+            UpdateDisplay();
+        }
+        if (Input.GetKey(KeyCode.N))
+        {
+            LoadNextScene();
+        }
     }
     
 }
