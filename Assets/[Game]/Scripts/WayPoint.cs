@@ -76,7 +76,7 @@ public class WayPoint : MonoBehaviour
 
         if (bank.CurrentBalance < costOfTower)
         {
-            textMeshPro.text = "You Cannot Affort This Tower";
+            textMeshPro.text = "Not Enough Gold";
             yield return new WaitForSeconds(2f);
             textMeshPro.text = "";
         }

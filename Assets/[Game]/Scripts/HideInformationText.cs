@@ -5,10 +5,10 @@ using TMPro;
 
 public class HideInformationText : MonoBehaviour
 {
-    public GameObject informationText;
+    public GameObject InformationPanel;
     void Awake()
     {
-        informationText.SetActive(true);
+        InformationPanel.SetActive(true);
     }
 
     
@@ -21,7 +21,7 @@ public class HideInformationText : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            informationText.SetActive(false);
+            InformationPanel.SetActive(false);
         }
         
     }
