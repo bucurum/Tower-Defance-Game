@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using TMPro;
 public class Tower : MonoBehaviour
 { 
     public bool CreateTower(Tower tower, Vector3 position, int costOfTower)
     {
-       if (!EventSystem.current.IsPointerOverGameObject())
+       if (!EventSystem.current.IsPointerOverGameObject()) //if the menu or any ui object is enabled we can`t click and place a tower
         { 
             Bank bank = FindObjectOfType<Bank>();
             if(bank == null)
@@ -15,7 +12,7 @@ public class Tower : MonoBehaviour
                 return false;
             }
 
-            if (bank.CurrentBalance >= costOfTower)
+            if (bank.CurrentBalance >= costOfTower) // check the ballance if we have enough money to place a tower, if we have place a tower which tile we clicked
             {
                 Instantiate(tower, position, Quaternion.identity);
                 bank.Withdraw(costOfTower);

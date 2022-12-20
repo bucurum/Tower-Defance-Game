@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,11 +16,11 @@ public class Bank : MonoBehaviour
         currentBalance = startingBalance;
         UpdateDisplay();
     }
-    public void Deposit(int amount)
+    public void Deposit(int amount) //when a tower killed an enemy it will erned amouth of gold
     {
         currentBalance += Mathf.Abs(amount);
         UpdateDisplay();
-        if (currentBalance >= finisingBalance)
+        if (currentBalance >= finisingBalance) //if our balance is equal or greater than we want load next scene
         {
             LoadNextScene();
         }
@@ -33,11 +31,11 @@ public class Bank : MonoBehaviour
         displayBalance.text = "Gold: " + currentBalance;
     }
 
-    public void Withdraw(int amount)
+    public void Withdraw(int amount) //when enemy reachs the end of the path deposit amouth of gold
     {
         currentBalance -= Mathf.Abs(amount);
         UpdateDisplay();
-        if (currentBalance < 0)
+        if (currentBalance < 0) // if our balance < 0 reload the scene
         {
             ReloadScene();
         } 
@@ -55,7 +53,7 @@ public class Bank : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.buildIndex + 1);   
     }
-    void Update()
+    void Update() //that`s cheat code
     {
         if (Input.GetKey(KeyCode.H))
         {

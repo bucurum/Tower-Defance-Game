@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
@@ -27,6 +26,7 @@ public class WayPoint : MonoBehaviour
     
     void OnMouseDown()
     {
+        //select tower with ID and instantiate when clicked a tile
         switch(towerID)
         {
             case 0:
@@ -35,22 +35,18 @@ public class WayPoint : MonoBehaviour
             case 1:
                 StartCoroutine(ButtonInformation(costofTower1));
                 InstantiateTower(towerPrefab1, costofTower1);
-                Debug.Log("towerprefab is placed");
                 break;
             case 2:
                 StartCoroutine(ButtonInformation(costofTower2));
                 InstantiateTower(towerPrefab2, costofTower2);
-                Debug.Log("towerprefab1 is placed");
                 break;
             case 3:
                 StartCoroutine(ButtonInformation(costofTower3));
                 InstantiateTower(towerPrefab3, costofTower3);
-                Debug.Log("towerprefab2 is placed");
                 break;
             case 4:
                 StartCoroutine(ButtonInformation(costofTower4));
                 InstantiateTower(towerPrefab4, costofTower4);
-                Debug.Log("towerprefab3 is placed");
                 break;
         }
         

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class HideInformationText : MonoBehaviour
 {
@@ -17,7 +14,7 @@ public class HideInformationText : MonoBehaviour
         HideText();
     }
 
-    void HideText()
+    void HideText() //when game starts the text will be disabled
     {
         if (Input.GetMouseButtonDown(0))
         {
